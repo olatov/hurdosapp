@@ -1,0 +1,20 @@
+﻿@model WeatherViewModel
+
+@{
+    ViewData["Title"] = "Weather Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Текущая погода на @Model.Weather.DateTime.ToString("HH:mm")</h1>
+
+    <dl>
+        <dt>Температура воздуха</dt>
+        <dd>@Model.Weather.Temperature °C</dd>
+
+        <dt>Скорость ветра</dt>
+        <dd>@Model.Weather.WindSpeed м/с</dd>
+
+        <dt>Метеоусловия</dt>
+        <dd>@Model.Weather.Conditions</dd>
+    </dl>
+</div>
